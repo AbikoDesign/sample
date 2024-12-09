@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculation App</title>
+    <title>集計アプリサンプル</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculation App</h1>
-    <input type="number" id="number1" placeholder="Enter number">
-    <input type="number" id="number2" placeholder="Enter number">
-    <button onclick="calculateSum()">Calculate Sum</button>
-    <p>Result: <span id="result"></span></p>
+    <h1>集計アプリサンプル</h1>
+    <div class="input-container">
+        <div>
+            <label for="number1">Ａ市: </label>
+            <input type="number" id="number1" placeholder="数字を入力">
+        </div>
+        <div>
+            <label for="number2">Ｂ町: </label>
+            <input type="number" id="number2" placeholder="数字を入力">
+        </div>
+        <div>
+            <label for="number1">Ｃ村: </label>
+            <input type="number" id="number3" placeholder="数字を入力">
+        </div>
+        <div>
+            <button onclick="calculateSum()">集計</button>
+        </div>
+    </div>
+    <p>合計: <span id="result"></span></p>
     <script src="script.js"></script>
 </body>
 </html>
