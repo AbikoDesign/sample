@@ -1,12 +1,12 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyAm5YzqWj3XvWi2b9aDDzs6SjoWm4bEY_Q",
+    authDomain: "sample-fcb1d.firebaseapp.com",
+    databaseURL: "https://sample-fcb1d-default-rtdb.firebaseio.com",
+    projectId: "sample-fcb1d",
+    storageBucket: "sample-fcb1d.firebasestorage.app",
+    messagingSenderId: "212374268662",
+    appId: "1:212374268662:web:549b8c7aa9967d0a605ad7"
 };
 
 // Initialize Firebase
