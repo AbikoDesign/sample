@@ -12,20 +12,25 @@
         <div>
             <label for="number1">Ａ市: </label>
             <input type="number" id="number1" placeholder="数字を入力">
+            <button onclick="saveNumber('number1')">登録</button>
         </div>
         <div>
             <label for="number2">Ｂ町: </label>
             <input type="number" id="number2" placeholder="数字を入力">
+            <button onclick="saveNumber('number2')">登録</button>
         </div>
         <div>
-            <label for="number1">Ｃ村: </label>
+            <label for="number3">Ｃ村: </label>
             <input type="number" id="number3" placeholder="数字を入力">
+            <button onclick="saveNumber('number3')">登録</button>
         </div>
         <div>
             <button onclick="calculateSum()">集計</button>
         </div>
     </div>
     <p>合計: <span id="result"></span></p>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
