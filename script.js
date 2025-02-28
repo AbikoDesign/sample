@@ -36,3 +36,31 @@ function calculateSum() {
         });
     });
 }
+function exportToCSV() {
+    var ref = firebase.database().ref('numbers'); // Adjust this path to match your database structure
+    ref.once('value', function (snapshot) {
+        var data = snapshot.val();
+
+        // Initialize the CSV string with headers
+        var csv = 'ID,Number\n';
+
+        // Loop through the data and append rows to the CSV string
+        for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+                csv += key + ',' + data[key].number + '\n'; // Adjust fields to match your data
+            }
+        }
+
+        // Create a Blob from the CSV string
+        var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+
+        // Create a link to download the file
+        var link = document.createElement('a');
+        var url = URL.createObjectURL(blob);
+        link.setAttribute('href', url);
+        link.setAttribute('download', 'numbers.csv'); // Name of the file
+        document.body.appendChild(link);
+        link.click(); // Trigger the download
+        document.body.removeChild(link); // Clean up
+    });
+}
